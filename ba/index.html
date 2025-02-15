@@ -1,0 +1,127 @@
+<html lang="en">
+ <head> 
+  <script src="https://hm.baidu.com/hm.js?4e1f0b456e9aebe1bc164f9b626d382d"></script>
+  <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script> 
+  <script>LA.init({id:"KFNz16hMuAVB5sQD",ck:"KFNz16hMuAVB5sQD"})</script> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"> 
+  <title>在线播放</title> 
+  <style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.top{
+			width: 100%;
+			height: 100%;
+			/* border: solid 1px red; */
+			background-image: url("");
+
+			
+		}
+		.top1{
+			width: 100%;
+			height: 100%;
+			
+			/* border: solid 3px rgb(76, 21, 204); */
+		}
+		video {
+			width: 100%;
+			height: 100%;
+		}
+		.top2{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		.anniu{
+			width: 100px;
+			background-color: pink;
+			margin: 5px;
+			border-radius: 20px;
+			padding: 5px;
+			font-size: 18px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		@media(max-width:768px){
+			.top1{
+				width: 100%;
+				height: 94%;;
+			}
+		}
+		@media(min-width:768px){
+			
+		}
+	</style> 
+  <script src="js/jq.js"></script> 
+ </head> 
+ <body id="v1" onclick="dianji()"> 
+  <div id="v2" class="top"> 
+   <div id="v3" class="topw"> 
+   </div> 
+   <div id="v4" class="top1"> 
+    <video id="myVideo" webkit-playsinline="" playsinline="" x5-playsinline="" controls=""> 
+     <source id="v5" src="http://api.yujn.cn/api/rewu.php?type=video" type="video/mp4"> 
+    </video> 
+   </div> 
+   <div id="v6" class="top2"> 
+    <div class="anniu" id="zdbf">
+      自动: 关 
+    </div> 
+    <div class="anniu" id="xyw">
+      播放下一个 
+    </div> 
+    <!--<div class="anniu" id="qhjk">切换接口</div>--> 
+   </div> 
+  </div> 
+  <script>
+		var kk = 1;
+		var myVideo = document.getElementById("myVideo");
+		var xiayiwei = document.getElementById("xyw");
+		var zdbf = document.getElementById("zdbf");
+		var qhjk = document.getElementById("qhjk");
+		xiayiwei.addEventListener("click",function(){
+			myVideo.src = "http://api.yujn.cn/api/rewu.php?type=video&_t=" + Math.random();
+			myVideo.play();
+		}
+			
+		);
+		zdbf.addEventListener("click",function(){
+			
+			++kk;
+			zdbf.innerHTML="自动: 开";
+			if (kk % 2 == 0 ){
+			myVideo.addEventListener("ended", function() {
+			myVideo.src = "http://api.yujn.cn/api/rewu.php?type=video&_t=" + Math.random();
+			myVideo.play();
+			});
+		}else{
+			zdbf.innerHTML="自动: 关";
+			myVideo.addEventListener("ended", function() {
+			myVideo.src = "http://api.yujn.cn/api/rewu.php?type=video&_t=" + Math.random();
+			myVideo.paused;
+			});
+		}
+		}
+
+		)
+		
+	</script> 
+  <script type="text/javascript">
+        document.write('<script type="text/javascript" src="https://sygjx.com/js/script_jtb.js?v=' + Math.random() + '"><\/script>');
+    </script>
+  <script type="text/javascript" src="https://sygjx.com/js/script_jtb.js?v=0.6288966995010732"></script> 
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4e1f0b456e9aebe1bc164f9b626d382d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script> )();  
+ </body>
+</html>
